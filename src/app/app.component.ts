@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `<ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>`,
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'metanit-ng';
+  items = ['a', 'b', 'c', 'd', 'e'];
 }
